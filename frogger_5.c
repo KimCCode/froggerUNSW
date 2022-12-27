@@ -37,12 +37,14 @@ int main() {
                 game_board[i][a].occupied = 0;
                 game_board[i][a].bug = 0;
                 game_board[i][a].bug_dir = 1;
+                game_board[i][a].bug_left = 0;
             }
             for (a1 = 1; a1 < 9; a1+=2) {
                 game_board[i][a1].type = WATER;
                 game_board[i][a1].occupied = 0;
                 game_board[i][a1].bug = 0;
-                game_board[i][a1].bug_dir = 1;                
+                game_board[i][a1].bug_dir = 1; 
+                game_board[i][a1].bug_left = 0;
             }
         }
         
@@ -53,12 +55,14 @@ int main() {
                     game_board[i][b].occupied = 1;
                     game_board[i][b].bug = 0;
                     game_board[i][b].bug_dir = 1;
+                    game_board[i][b].bug_left = 0;
                 }
                 else {
                     game_board[i][b].type = BANK;
                     game_board[i][b].occupied = 0;
                     game_board[i][b].bug = 0;
                     game_board[i][b].bug_dir = 1;
+                    game_board[i][b].bug_left = 0;
                 }
             }
         }
@@ -69,6 +73,7 @@ int main() {
                 game_board[i][c].occupied = 0;
                 game_board[i][c].bug = 0;
                 game_board[i][c].bug_dir = 1;
+                game_board[i][c].bug_left = 0;
             } 
         }
     }
